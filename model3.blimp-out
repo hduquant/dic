@@ -1,0 +1,379 @@
+
+---------------------------------------------------------------------------
+
+                                   Blimp
+                               3.1.7 (beta)
+
+             Blimp was developed with funding from Institute of
+          Educational Sciences awards R305D150056 and R305D190002.
+
+            Craig K. Enders, P.I. Email: cenders@psych.ucla.edu
+              Brian T. Keller, Co-P.I. Email: blimp@utexas.edu
+                 Han Du, Co-P.I. Email: hdu@psych.ucla.edu
+                 Roy Levy, Co-P.I. Email: roy.levy@asu.edu
+
+              Programming and Blimp Studio by Brian T. Keller
+
+                   There is no expressed license given.
+
+
+                     THIS IS A BETA RELEASE OF BLIMP
+                   NEW FEATURES ARE STILL BEING TESTED
+
+---------------------------------------------------------------------------
+
+
+ALGORITHMIC OPTIONS SPECIFIED:
+
+  Imputation method:                 Fully Bayesian model-based
+  MCMC algorithm:                    Full conditional Metropolis sampler
+  Between-cluster imputation model:  Latent cluster means (LATENT)
+  Residual variance structure:       Homogeneous level-1 variance (HOV)
+  Prior for random effect variances: Zero matrix, df = -(p + 1) (PRIOR2)
+  Prior for residual variances:      Zero sum of squares, df = -2 (PRIOR2)
+  Prior for predictor variances:     Unit sum of squares, df = 2 (XPRIOR1)
+  Chain Starting Values:             Random starting values
+
+
+
+BURN-IN POTENTIAL SCALE REDUCTION (PSR) OUTPUT:
+
+  NOTE: Split chain PSR is being used. This splits each chain's
+        iterations to create twice as many chains.
+
+  Comparing iterations across 2 chains     Highest PSR   Parameter #  
+                          251 to 500             1.274            18  
+                          501 to 1000            1.088            12  
+                          751 to 1500            1.161            18  
+                         1001 to 2000            1.152            18  
+                         1251 to 2500            1.120            18  
+                         1501 to 3000            1.103            32  
+                         1751 to 3500            1.021            32  
+                         2001 to 4000            1.024            12  
+                         2251 to 4500            1.035            18  
+                         2501 to 5000            1.039            19  
+                         2751 to 5500            1.040            19  
+                         3001 to 6000            1.032            19  
+                         3251 to 6500            1.029            12  
+                         3501 to 7000            1.072            31  
+                         3751 to 7500            1.034            19  
+                         4001 to 8000            1.033            19  
+                         4251 to 8500            1.024            19  
+                         4501 to 9000            1.019            19  
+                         4751 to 9500            1.030            31  
+                         5001 to 10000           1.028            31  
+
+
+PARAMETER LABELS:
+
+  Printing out PSR for last 5 comparisons:
+
+  NOTE: Split chain PSR is being used. This splits each chain's
+        iterations to create twice as many chains.
+
+  Comparing iterations across 2 chains  
+                  [1]    4001 to 8000  
+                  [2]    4251 to 8500  
+                  [3]    4501 to 9000  
+                  [4]    4751 to 9500  
+                  [5]    5001 to 10000 
+
+                                      [1]    [2]    [3]    [4]    [5]  
+Outcome Variable:  empower    
+
+    Variances:                      
+  1  L2 : Var(Intercept)              1.00   1.00   1.00   1.00   1.00 
+  2  L2 : Cov(lmx,Intercept)          1.01   1.00   1.01   1.00   1.00 
+  3  L2 : Var(lmx)                    1.01   1.02   1.02   1.01   1.00 
+  4  Residual Var.                    1.00   1.00   1.00   1.00   1.00 
+
+    Coefficients:                   
+  5  Intercept                        1.00   1.00   1.00   1.00   1.00 
+  6  lmx                              1.00   1.00   1.00   1.00   1.00 
+  7  lmx.mean[team]                   1.00   1.00   1.00   1.00   1.00 
+
+    Standardized Coefficients:      
+  8  lmx                              1.00   1.00   1.00   1.00   1.00 
+  9  lmx.mean[team]                   1.00   1.00   1.00   1.00   1.00 
+
+    Proportion Variance Explained   
+ 10  by Coefficients                  1.00   1.00   1.00   1.00   1.00 
+ 11  by Level-2 Random Intercepts     1.00   1.00   1.00   1.00   1.00 
+ 12  by Level-2 Random Slopes         1.01   1.02   1.02   1.01   1.00 
+ 13  by Level-1 Residual Variation    1.00   1.01   1.01   1.01   1.00 
+
+
+Outcome Variable:  worksat    
+
+    Variances:                      
+ 14  L2 : Var(Intercept)              1.01   1.01   1.01   1.03   1.03 
+ 15  L2 : Cov(empower,Intercept)      1.01   1.01   1.00   1.00   1.01 
+ 16  L2 : Var(empower)                1.01   1.01   1.01   1.01   1.00 
+ 17  L2 : Cov(lmx,Intercept)          1.03   1.01   1.01   1.00   1.00 
+ 18  L2 : Cov(lmx,empower)            1.00   1.00   1.01   1.01   1.01 
+ 19  L2 : Var(lmx)                    1.03   1.02   1.02   1.02   1.02 
+ 20  Residual Var.                    1.00   1.00   1.00   1.00   1.00 
+
+    Coefficients:                   
+ 21  Intercept                        1.01   1.01   1.01   1.01   1.01 
+ 22  empower                          1.01   1.01   1.00   1.00   1.00 
+ 23  empower.mean[team]               1.02   1.02   1.02   1.01   1.01 
+ 24  lmx                              1.00   1.01   1.00   1.00   1.00 
+ 25  lmx.mean[team]                   1.00   1.00   1.00   1.00   1.00 
+
+    Standardized Coefficients:      
+ 26  empower                          1.01   1.01   1.00   1.00   1.00 
+ 27  empower.mean[team]               1.01   1.02   1.01   1.01   1.01 
+ 28  lmx                              1.00   1.01   1.00   1.00   1.00 
+ 29  lmx.mean[team]                   1.00   1.00   1.00   1.00   1.00 
+
+    Proportion Variance Explained   
+ 30  by Coefficients                  1.00   1.00   1.00   1.00   1.00 
+ 31  by Level-2 Random Intercepts     1.02   1.01   1.01   1.03   1.03 
+ 32  by Level-2 Random Slopes         1.01   1.00   1.01   1.02   1.01 
+ 33  by Level-1 Residual Variation    1.00   1.00   1.01   1.00   1.00 
+
+
+Generated Parameters:
+
+ 34  indirect.l1                      1.01   1.01   1.00   1.00   1.00 
+ 35  indirect.l2                      1.01   1.01   1.01   1.00   1.00 
+
+
+Missing predictor:  lmx        
+
+ 36  Grand Mean                       1.00   1.00   1.00   1.00   1.00 
+
+     Level 1:                       
+ 37   Residual Var.                   1.00   1.00   1.00   1.00   1.00 
+
+     Level 2:                       
+ 38   Residual Var.                   1.00   1.00   1.00   1.00   1.01 
+
+
+Means Model:        empower    
+
+ 39  Grand Mean                       1.01   1.00   1.00   1.00   1.00 
+
+     Level 1:                       
+ 40   Residual Var.                   1.01   1.01   1.00   1.00   1.00 
+
+     Level 2:                       
+ 41   Residual Var.                   1.01   1.02   1.02   1.01   1.01 
+
+
+METROPOLIS-HASTINGS ACCEPTANCE RATES:
+
+  Chain 1:
+
+    Variable                            Type    Probability   Target Value 
+    empower                       imputation          0.501          0.500 
+    lmx                           imputation          0.499          0.500 
+    lmx                           latent imp          0.497          0.500 
+    empower                       latent imp          0.503          0.500 
+
+  NOTE: Suppressing printing of 1 chains.
+        Use keyword 'tuneinfo' in options to override.
+
+
+DATA INFORMATION:
+
+  Level-2 identifier:       team
+  Sample Size:              630
+  Level-2 Clusters:         105
+  Missing Data Rates:
+
+                  empower = 16.19
+                  worksat = 04.76
+                      lmx = 04.13
+
+
+
+MODEL INFORMATION:
+
+  NUMBER OF PARAMETERS
+    Outcome Models:         19
+    Generated Parameters:   2
+    Predictor Models:       6
+
+  PREDICTORS
+    Incomplete continuous:  lmx
+
+  CENTERED PREDICTORS
+    Group Mean Centered:    lmx empower
+
+  LATENT CLUSTER MEANS
+    Uncentered:             lmx empower
+
+  MODELS
+    [1]  empower ~ Intercept lmx@apath.lev1 lmx.mean[team]@apath.lev2 | Intercept 
+                 lmx
+    [2]  worksat ~ Intercept empower@bpath.lev1 empower.mean[team]@bpath.lev2 
+                 lmx lmx.mean[team] | Intercept empower lmx
+
+  GENERATED PARAMETERS
+    [1]  indirect.l1 = apath.lev1*bpath.lev1
+    [2]  indirect.l2 = apath.lev2*bpath.lev2
+
+
+WARNING MESSAGES:
+
+  No warning messages.
+
+
+MODEL FIT:
+
+
+  INFORMATION CRITERIA
+
+    Marginal Likelihood
+      DIC1                  nan
+      DIC2                  5511.442
+      WAIC                  5570.962
+
+    Conditional Likelihood
+      DIC1                  nan
+      DIC2                  5366.736
+      WAIC                  5488.689
+
+
+OUTCOME MODEL ESTIMATES:
+
+  Summaries based on 10000 iterations using 2 chains.
+
+
+Outcome Variable:  empower    
+
+Group Mean Centered: lmx
+
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  L2 : Var(Intercept)                 2.254      0.814      0.980      4.142      1.004    609.695 
+  L2 : Cov(lmx,Intercept)             0.125      0.210     -0.254      0.572      1.008    333.029 
+  L2 : Var(lmx)                       0.222      0.098      0.062      0.444      1.007    262.190 
+  Residual Var.                      12.627      0.977     10.902     14.752      1.001   1468.664 
+
+Coefficients:                   
+  Intercept                          27.818      1.493     24.847     30.725      1.006   1084.269 
+  lmx                                 0.672      0.083      0.509      0.833      1.001   1883.333 
+  lmx.mean[team]                      0.086      0.153     -0.213      0.391      1.006   1053.243 
+
+Standardized Coefficients:      
+  lmx                                 0.420      0.046      0.325      0.505      1.001   1733.618 
+  lmx.mean[team]                      0.030      0.052     -0.073      0.132      1.006   1069.900 
+
+Proportion Variance Explained   
+  by Coefficients                     0.187      0.037      0.118      0.261      1.002   1733.697 
+  by Level-2 Random Intercepts        0.109      0.036      0.048      0.188      1.003    603.840 
+  by Level-2 Random Slopes            0.087      0.036      0.025      0.165      1.006    268.486 
+  by Level-1 Residual Variation       0.611      0.050      0.514      0.711      1.005    500.405 
+
+                                -------------------------------------------------------------------
+
+
+
+Outcome Variable:  worksat    
+
+Group Mean Centered: empower lmx
+
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+Variances:                      
+  L2 : Var(Intercept)                 0.142      0.054      0.056      0.266      1.015    289.494 
+  L2 : Cov(empower,Intercept)        -0.019      0.009     -0.041     -0.004      1.002    379.267 
+  L2 : Var(empower)                   0.006      0.003      0.002      0.013      1.015    227.029 
+  L2 : Cov(lmx,Intercept)             0.018      0.013     -0.006      0.045      1.012    189.424 
+  L2 : Cov(lmx,empower)              -0.004      0.003     -0.012      0.000      1.013    195.717 
+  L2 : Var(lmx)                       0.010      0.006      0.002      0.025      1.011    174.040 
+  Residual Var.                       1.074      0.073      0.941      1.229      1.002   2060.453 
+
+Coefficients:                   
+  Intercept                           1.738      0.956     -0.098      3.674      1.004   1571.976 
+  empower                             0.028      0.017     -0.005      0.061      1.008   1374.161 
+  empower.mean[team]                  0.054      0.034     -0.015      0.120      1.005   1238.330 
+  lmx                                 0.144      0.024      0.095      0.190      1.004   1735.206 
+  lmx.mean[team]                      0.074      0.042     -0.010      0.155      1.006   1229.194 
+
+Standardized Coefficients:      
+  empower                             0.091      0.056     -0.017      0.200      1.009   1225.507 
+  empower.mean[team]                  0.080      0.050     -0.021      0.175      1.004   1287.145 
+  lmx                                 0.315      0.051      0.211      0.410      1.006   1351.605 
+  lmx.mean[team]                      0.089      0.050     -0.012      0.185      1.006   1214.522 
+
+Proportion Variance Explained   
+  by Coefficients                     0.187      0.032      0.127      0.252      1.000   2656.102 
+  by Level-2 Random Intercepts        0.084      0.030      0.034      0.149      1.014    289.743 
+  by Level-2 Random Slopes            0.084      0.031      0.038      0.158      1.011    254.359 
+  by Level-1 Residual Variation       0.639      0.042      0.556      0.722      1.004    632.956 
+
+                                -------------------------------------------------------------------
+
+
+
+GENERATED PARAMETERS:
+
+  Summaries based on 10000 iterations using 2 chains.
+
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+
+  indirect.l1                         0.018      0.012     -0.003      0.042      1.008   1256.177 
+  indirect.l2                         0.003      0.010     -0.013      0.029      1.005   1393.275 
+
+                                -------------------------------------------------------------------
+
+
+PREDICTOR MODEL ESTIMATES:
+
+  Summaries based on 10000 iterations using 2 chains.
+
+
+Missing predictor:  lmx        
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+
+Grand Mean                            9.612      0.159      9.306      9.927      1.002    768.540 
+
+Level 1:                                                                                           
+  Residual Var.                       8.059      0.515      7.140      9.143      1.002   1464.579 
+
+Level 2:                                                                                           
+  Residual Var.                       0.991      0.342      0.417      1.769      1.031    268.500 
+                                                                                                   
+                                -------------------------------------------------------------------
+
+
+
+Means Model:        empower    
+
+    NOTE: This model is used to estimate the grand mean and latent group means needed 
+          to center outcome variables that appear as predictors in other models.
+
+Parameters                           Median     StdDev       2.5%      97.5%        PSR      N_Eff 
+                                -------------------------------------------------------------------
+
+Grand Mean                           28.637      0.226     28.199     29.081      1.007    666.137 
+
+Level 1:                                                                                           
+  Residual Var.                      18.316      1.320     16.000     21.181      1.003    780.000 
+
+Level 2:                                                                                           
+  Residual Var.                       1.983      0.756      0.740      3.702      1.009    162.682 
+                                                                                                   
+                                -------------------------------------------------------------------
+
+
+
+VARIABLE ORDER IN IMPUTED DATA:
+
+  separate = './imps/model1imp*.dat'
+
+     employee team turnover male empower lmx worksat climate cohesion empower[team]
+     empower$lmx[team] worksat[team] worksat$empower[team] worksat$lmx[team] lmx.mean[team]
+     empower.mean[team]
+

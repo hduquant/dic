@@ -1,0 +1,25 @@
+DATA: employee.dat;
+VARIABLES: employee team turnover male empower lmx worksat climate cohesion;
+CLUSTERID: team;
+MISSING: 999;
+CENTER:
+groupmean = lmx empower;
+MODEL: 
+worksat ~ empower@bpath lmx ;
+empower ~ lmx@apath;
+PARAMETERS:
+indirect = apath * bpath;
+SEED: 90291;
+BURN: 5000;
+OPTIONS: savelatent scientific labels;
+ITERATIONS: 10000;
+nimps: 10000;
+SAVE:
+# save average imputations;
+ avgimp = avgimp.model1.dat;
+# save posterior summaries;
+estimates = summaries.model1.dat;
+# imputations
+likelihood = ll.model1.csv;
+# imputations; 
+Separate = ./imps/model1imp*.dat;
